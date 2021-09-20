@@ -1,6 +1,6 @@
+import 'package:brew/src/screens/sign_up_page.dart';
 import 'package:brew/src/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/welcome_screen.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: const SignUpPage(),
     );
   }
 }
