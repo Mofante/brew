@@ -1,8 +1,8 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/login_button.dart';
 import 'layout.dart';
+import '../widgets/bottom_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -71,27 +71,10 @@ class WelcomeScreen extends StatelessWidget {
               ),*/
           loginButton(size, const Color(0xffFEFAE0), Colors.black,
               'Sign Up with Google'),
-          SizedBox(
-            width: size.width * 0.8,
-            child: RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                style: const TextStyle(
-                  color: Color(0xffFEFAE0),
-                ),
-                text: 'Already have an account? ',
-                children: [
-                  TextSpan(
-                    style: const TextStyle(
-                      color: Color(0xffFEFAE0),
-                      decoration: TextDecoration.underline,
-                    ),
-                    recognizer: TapGestureRecognizer()..onTap = () {},
-                    text: 'Sign In',
-                  ),
-                ],
-              ),
-            ),
+          BottomText(
+            size: size,
+            text: 'Already have an account? ',
+            clickableText: 'Sign In',
           )
         ],
       ),

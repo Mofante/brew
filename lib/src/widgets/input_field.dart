@@ -8,13 +8,13 @@ Widget inputField(Size size, String hintText, bool isPassword) {
     child: TextFormField(
       obscureText: isPassword,
       obscuringCharacter: '*',
-      cursorColor: Color(0xffFEFAE0),
-      style: TextStyle(
+      cursorColor: const Color(0xffFEFAE0),
+      style: const TextStyle(
         color: Color(0xffFEFAE0),
       ),
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           color: Color(0x5DFEFAE0),
         ),
         filled: true,
@@ -22,7 +22,7 @@ Widget inputField(Size size, String hintText, bool isPassword) {
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(10.0),
         ),
-        fillColor: Color(0xff435134),
+        fillColor: const Color(0xff435134),
       ),
     ),
   );
