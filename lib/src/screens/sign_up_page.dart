@@ -14,7 +14,7 @@ class SignUpPage extends StatelessWidget {
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
             'Welcome!',
@@ -39,6 +39,7 @@ class SignUpPage extends StatelessWidget {
             const Color(0xffBA5A31),
             const Color(0xffFEFAE0),
             'Sign Up',
+            () {},
           ),
           SizedBox(
             height: size.height * 0.1,
@@ -47,6 +48,9 @@ class SignUpPage extends StatelessWidget {
             size: size,
             text: 'Already have an account? ',
             clickableText: 'Sign In',
+            onTap: () => () {
+              Navigator.pushReplacementNamed(context, '/login');
+            },
           )
         ],
       ),

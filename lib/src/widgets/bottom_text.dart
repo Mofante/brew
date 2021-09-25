@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class BottomText extends StatelessWidget {
   const BottomText(
       {Key? key,
+      required this.onTap,
       required this.size,
       required this.text,
       required this.clickableText})
@@ -12,6 +13,7 @@ class BottomText extends StatelessWidget {
   final Size size;
   final String text;
   final String clickableText;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class BottomText extends StatelessWidget {
                 color: Color(0xffFEFAE0),
                 decoration: TextDecoration.underline,
               ),
-              recognizer: TapGestureRecognizer()..onTap = () {},
+              recognizer: TapGestureRecognizer()..onTap = onTap(),
               text: clickableText,
             ),
           ],

@@ -14,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
             'Brew.',
@@ -64,17 +64,32 @@ class WelcomeScreen extends StatelessWidget {
           SizedBox(
             height: size.height * 0.02,
           ),
-          loginButton(size, const Color(0xffBA5A31), const Color(0xffFEFAE0),
-              'Sign Up with Email'),
+          loginButton(
+            size,
+            const Color(0xffBA5A31),
+            const Color(0xffFEFAE0),
+            'Sign Up with Email',
+            () => () {
+              Navigator.pushNamed(context, '/register');
+            },
+          ),
           /*SizedBox(
                 height: size.height * 0.05,
               ),*/
-          loginButton(size, const Color(0xffFEFAE0), Colors.black,
-              'Sign Up with Google'),
+          loginButton(
+            size,
+            const Color(0xffFEFAE0),
+            Colors.black,
+            'Sign Up with Google',
+            () => () {},
+          ),
           BottomText(
             size: size,
             text: 'Already have an account? ',
             clickableText: 'Sign In',
+            onTap: () => () {
+              Navigator.pushReplacementNamed(context, '/login');
+            },
           )
         ],
       ),

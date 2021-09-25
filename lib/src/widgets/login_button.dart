@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget loginButton(Size size, Color bcolor, Color fcolor, String text) {
+Widget loginButton(
+    Size size, Color bcolor, Color fcolor, String text, Function onTap) {
   return SizedBox(
     width: size.width * 0.8,
     height: size.height * 0.06,
@@ -17,7 +18,7 @@ Widget loginButton(Size size, Color bcolor, Color fcolor, String text) {
         ),
       ),
       child: Text(text),
-      onPressed: () {},
+      onPressed: onTap(),
     ),
   );
 }
