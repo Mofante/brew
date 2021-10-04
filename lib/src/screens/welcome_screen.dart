@@ -11,11 +11,13 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Layout(
+      appBar: null,
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+//          SizedBox(),
           Text(
             'Brew.',
             style: TextStyle(

@@ -1,4 +1,6 @@
+import 'package:brew/src/app.dart';
 import 'package:brew/src/screens/layout.dart';
+import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/input_field.dart';
 import 'package:brew/src/widgets/login_button.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,11 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Layout(
+      appBar: appBar(
+        () => () {
+          Navigator.pushReplacementNamed(context, '/');
+        },
+      ),
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
