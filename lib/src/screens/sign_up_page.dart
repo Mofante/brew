@@ -1,4 +1,3 @@
-import 'package:brew/src/app.dart';
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/input_field.dart';

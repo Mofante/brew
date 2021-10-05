@@ -1,3 +1,4 @@
+import 'package:brew/src/screens/home.dart';
 import 'package:brew/src/screens/log_in_page.dart';
 import 'package:brew/src/screens/sign_up_page.dart';
 import 'package:brew/src/screens/welcome_screen.dart';
@@ -11,11 +12,12 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/': (context) => WelcomeScreen(),
         '/register': (context) => SignUpPage(),
         '/login': (context) => LoginPage(),
+        '/home': (context) => Home()
       },
     );
   }
