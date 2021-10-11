@@ -83,7 +83,9 @@ class WelcomeScreen extends StatelessWidget {
             const Color(0xffFEFAE0),
             Colors.black,
             'Sign Up with Google',
-            () => () {},
+            () => () {
+              Navigator.pushNamed(context, '/home');
+            },
           ),
           BottomText(
             size: size,

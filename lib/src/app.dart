@@ -12,7 +12,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
         '/': (context) => WelcomeScreen(),
         '/register': (context) => SignUpPage(),

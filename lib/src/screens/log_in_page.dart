@@ -13,10 +13,10 @@ class LoginPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Layout(
       appBar: appBar(
-        () => () {
-          Navigator.pushReplacementNamed(context, '/');
-        },
-      ),
+          () => () {
+                Navigator.pushReplacementNamed(context, '/');
+              },
+          Icon(Icons.arrow_back_ios)),
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
