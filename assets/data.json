@@ -1,0 +1,14 @@
+{
+   "id":1,
+   "title":"James Hoffmann's V60",
+   "ratio":6.25,
+   "temp":97,
+   "grind":"medium",
+   "steps":[
+      "Rinse the filter.",
+      "Add x grams of coffee and tare.",
+      "Bloom the coffee with x grams of water for y seconds",
+      "Slowly pour the rest of the coffee and give your brewer a gentle swirl.",
+      "Enjoy!"
+   ]
+}

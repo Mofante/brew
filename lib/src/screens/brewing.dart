@@ -1,3 +1,5 @@
+import 'package:brew/src/screens/layout.dart';
+import 'package:brew/src/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class BrewScreen extends StatelessWidget {
@@ -5,6 +7,17 @@ class BrewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+    return Layout(
+      size: size,
+      appBar: appBar(() {}, Icon(Icons.arrow_back_ios)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(""),
+        ],
+      ),
+    );
   }
 }
