@@ -1,3 +1,4 @@
+import 'package:brew/src/screens/brewing.dart';
 import 'package:brew/src/screens/home.dart';
 import 'package:brew/src/screens/log_in_page.dart';
 import 'package:brew/src/screens/sign_up_page.dart';
@@ -17,7 +18,8 @@ class App extends StatelessWidget {
         '/': (context) => WelcomeScreen(),
         '/register': (context) => SignUpPage(),
         '/login': (context) => LoginPage(),
-        '/home': (context) => Home()
+        '/home': (context) => Home(),
+        '/brew': (context) => BrewScreen()
       },
     );
   }

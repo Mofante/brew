@@ -1,6 +1,7 @@
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:brew/src/templates.dart';
 
 class BrewScreen extends StatelessWidget {
   const BrewScreen({Key? key}) : super(key: key);

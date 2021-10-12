@@ -1,4 +1,24 @@
+// To parse this JSON data, do
+//
+//     final brewMethod = brewMethodFromJson(jsonString);
+import 'dart:convert';
+
+List<BrewMethod> brewMethodFromJson(String str) =>
+    List<BrewMethod>.from(json.decode(str).map((x) => BrewMethod.fromJson(x)));
+
+String brewMethodToJson(List<BrewMethod> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 class BrewMethod {
+  BrewMethod({
+    required this.id,
+    required this.title,
+    required this.ratio,
+    required this.temp,
+    required this.grind,
+    required this.steps,
+  });
+
   int id;
   String title;
   double ratio;
@@ -6,26 +26,21 @@ class BrewMethod {
   String grind;
   List<String> steps;
 
-  BrewMethod(
-      {this.id, this.title, this.ratio, this.temp, this.grind, this.steps});
+  factory BrewMethod.fromJson(Map<String, dynamic> json) => BrewMethod(
+        id: json["id"],
+        title: json["title"],
+        ratio: json["ratio"].toDouble(),
+        temp: json["temp"],
+        grind: json["grind"],
+        steps: List<String>.from(json["steps"].map((x) => x)),
+      );
 
-  BrewMethod.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    title = json['title'];
-    ratio = json['ratio'];
-    temp = json['temp'];
-    grind = json['grind'];
-    steps = json['steps'].cast<String>();
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['ratio'] = this.ratio;
-    data['temp'] = this.temp;
-    data['grind'] = this.grind;
-    data['steps'] = this.steps;
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "title": title,
+        "ratio": ratio,
+        "temp": temp,
+        "grind": grind,
+        "steps": List<dynamic>.from(steps.map((x) => x)),
+      };
 }

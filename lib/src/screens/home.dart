@@ -1,7 +1,10 @@
+import 'dart:convert';
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/recipe_button.dart';
 import 'package:flutter/material.dart';
+import 'package:brew/src/templates.dart';
+import 'package:flutter/services.dart';
 
 int a = 0;
 void xd() {
@@ -9,8 +12,28 @@ void xd() {
   a--;
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  List<BrewMethod> brewMethods = [];
+
+  Future<void> ReadJsonData() async {
+    final jsondata = await rootBundle.loadString('assets/data.json');
+    setState(() {
+      brewMethods = brewMethodFromJson(jsondata);
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ReadJsonData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +63,7 @@ class Home extends StatelessWidget {
               width: size.width * 0.8,
               child: ListView(
                 children: [
-                  recipeButton(size, "4:6 By Tetsu Kasuya", () => xd),
+                  recipeButton(size, brewMethods[0].title, () => xd),
                   recipeButton(size, "James Hoffmann's V60", () => xd),
                   recipeButton(size, "April Coffee V60", () => xd),
                   recipeButton(size, "European Coffee Trip v60", () => xd),
