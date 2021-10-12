@@ -1,43 +1,48 @@
 [
     {
    "id":1,
-   "title":"James Hoffmann's V60",
-   "ratio":6.25,
-   "temp":97,
-   "grind":"medium",
+   "title":"James Hoffmann's Ultimate V60",
+   "ratio":0.06,
+   "temp":98,
+   "grind":"medium fine",
    "steps":[
-      "Rinse the filter.",
-      "Add x grams of coffee and tare.",
-      "Bloom the coffee with x grams of water for y seconds",
-      "Slowly pour the rest of the coffee and give your brewer a gentle swirl.",
+      "Put your coffee in the v60 and tare.",
+      "Create a little well in the middle of the grounds.",
+      "Bloom the coffee with around x grams of water, 45s",
+      "Swirl until evenly mixed",
+      "45 seconds",
+      "Pour 60% of your total brew water in the next 30 seconds",
+      "Pour the remaining 40% in the next 30 seconds",
+      "Stir once clockwise and once counterclockwise with a spoon",
+      "Give it a gantle swirl",
       "Enjoy!"
    ]
 },
     {
-   "id":1,
-   "title":"James Hoffmann's V60",
-   "ratio":6.25,
-   "temp":97,
-   "grind":"medium",
+   "id":2,
+   "title":"Tetsu Kasuya's 4:6",
+   "ratio":0.0666666,
+   "temp":92,
+   "grind":"coarse",
    "steps":[
-      "Rinse the filter.",
-      "Add x grams of coffee and tare.",
-      "Bloom the coffee with x grams of water for y seconds",
-      "Slowly pour the rest of the coffee and give your brewer a gentle swirl.",
+      "Put your coffee in the v60 and tare.",
+      "Bloom the coffee with around x grams of water, 45s",
+      "Slowly pour x grams of water and wait, 45s",
+      "Slowly pour x grams of water and wait, 45s",
+      "Slowly pour x grams of water and wait, 45s",
+      "Slowly pour x grams of water and wait, 45s",
       "Enjoy!"
    ]
 },
     {
-   "id":1,
-   "title":"James Hoffmann's V60",
-   "ratio":6.25,
-   "temp":97,
-   "grind":"medium",
+   "id":3,
+   "title":"Tetsu Kasuya's Sometimes Good",
+   "ratio":0.08333333,
+   "temp":96,
+   "grind":"very fine",
    "steps":[
-      "Rinse the filter.",
-      "Add x grams of coffee and tare.",
-      "Bloom the coffee with x grams of water for y seconds",
-      "Slowly pour the rest of the coffee and give your brewer a gentle swirl.",
+      "Put your coffee in the v60 and tare.",
+      "Pour all the water in 15s, during the first 10 seconds pour circularly, during last 5s pour in the center.",
       "Enjoy!"
    ]
 }

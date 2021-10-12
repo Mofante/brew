@@ -61,16 +61,12 @@ class _HomeState extends State<Home> {
           Expanded(
             child: SizedBox(
               width: size.width * 0.8,
-              child: ListView(
-                children: [
-                  recipeButton(size, brewMethods[0].title, () => xd),
-                  recipeButton(size, "James Hoffmann's V60", () => xd),
-                  recipeButton(size, "April Coffee V60", () => xd),
-                  recipeButton(size, "European Coffee Trip v60", () => xd),
-                  recipeButton(size, "Osmotic Flow", () => xd),
-                  recipeButton(size, "One Pour By Tetsu Kasuya", () => xd),
-                ],
-              ),
+              child: ListView.builder(
+                  itemCount: brewMethods.length,
+                  itemBuilder: (context, index) {
+                    return recipeButton(
+                        size, brewMethods[index].title, () => xd);
+                  }),
             ),
           ),
           SizedBox(
