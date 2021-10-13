@@ -13,7 +13,13 @@ class BrewScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Layout(
       size: size,
-      appBar: appBar(() {}, const Icon(Icons.arrow_back_ios), brewMethod.title),
+      appBar: appBar(
+        () => () {
+          Navigator.pop(context);
+        },
+        const Icon(Icons.arrow_back_ios),
+        brewMethod.title,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,

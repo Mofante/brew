@@ -8,7 +8,14 @@ PreferredSizeWidget? appBar(Function onTap, Icon icon, String title) {
       icon: icon,
       color: const Color(0xffFEFAE0),
     ),
-    title: Text(title),
+    title: Text(
+      title,
+      style: const TextStyle(
+        fontWeight: FontWeight.w400,
+        color: Color(0xffFEFAE0),
+      ),
+      textAlign: TextAlign.center,
+    ),
     backgroundColor: const Color(0xff283618),
   );
 }

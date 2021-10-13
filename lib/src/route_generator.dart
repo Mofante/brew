@@ -12,13 +12,13 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => WelcomeScreen());
+        return MaterialPageRoute(builder: (_) => const WelcomeScreen());
       case '/register':
-        return MaterialPageRoute(builder: (_) => SignUpPage());
+        return MaterialPageRoute(builder: (_) => const SignUpPage());
       case '/login':
-        return MaterialPageRoute(builder: (_) => LoginPage());
+        return MaterialPageRoute(builder: (_) => const LoginPage());
       case '/home':
-        return MaterialPageRoute(builder: (_) => Home());
+        return MaterialPageRoute(builder: (_) => const Home());
       case '/brew':
         if (args is BrewMethod) {
           return MaterialPageRoute(
@@ -33,7 +33,7 @@ class RouteGenerator {
 
   static Route<dynamic> _errorRoute() {
     return MaterialPageRoute(builder: (_) {
-      return Scaffold(
+      return const Scaffold(
         body: Center(child: Text('ERROR')),
       );
     });

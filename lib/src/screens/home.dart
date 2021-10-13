@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                       size,
                       brewMethods[index].title,
                       () => () {
-                        Navigator.pushReplacementNamed(
+                        Navigator.pushNamed(
                           context,
                           '/brew',
                           arguments: brewMethods[index],

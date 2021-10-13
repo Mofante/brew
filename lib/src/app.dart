@@ -1,9 +1,4 @@
 import 'package:brew/src/route_generator.dart';
-import 'package:brew/src/screens/brewing.dart';
-import 'package:brew/src/screens/home.dart';
-import 'package:brew/src/screens/log_in_page.dart';
-import 'package:brew/src/screens/sign_up_page.dart';
-import 'package:brew/src/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
