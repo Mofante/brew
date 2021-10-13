@@ -1,3 +1,4 @@
+import 'package:brew/src/route_generator.dart';
 import 'package:brew/src/screens/brewing.dart';
 import 'package:brew/src/screens/home.dart';
 import 'package:brew/src/screens/log_in_page.dart';
@@ -14,13 +15,7 @@ class App extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      routes: {
-        '/': (context) => WelcomeScreen(),
-        '/register': (context) => SignUpPage(),
-        '/login': (context) => LoginPage(),
-        '/home': (context) => Home(),
-        '/brew': (context) => BrewScreen()
-      },
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

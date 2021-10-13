@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/recipe_button.dart';
@@ -22,7 +21,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<BrewMethod> brewMethods = [];
 
-  Future<void> ReadJsonData() async {
+  Future<void> readJsonData() async {
     final jsondata = await rootBundle.loadString('assets/data.json');
     setState(() {
       brewMethods = brewMethodFromJson(jsondata);
@@ -32,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    ReadJsonData();
+    readJsonData();
   }
 
   @override
@@ -40,7 +39,7 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
     return Layout(
       size: size,
-      appBar: appBar(() => xd, Icon(Icons.menu_rounded)),
+      appBar: appBar(() => xd, const Icon(Icons.menu_rounded), ""),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -65,7 +64,16 @@ class _HomeState extends State<Home> {
                   itemCount: brewMethods.length,
                   itemBuilder: (context, index) {
                     return recipeButton(
-                        size, brewMethods[index].title, () => xd);
+                      size,
+                      brewMethods[index].title,
+                      () => () {
+                        Navigator.pushReplacementNamed(
+                          context,
+                          '/brew',
+                          arguments: brewMethods[index],
+                        );
+                      },
+                    );
                   }),
             ),
           ),

@@ -16,7 +16,8 @@ class SignUpPage extends StatelessWidget {
           () => () {
                 Navigator.pushReplacementNamed(context, '/');
               },
-          Icon(Icons.arrow_back_ios)),
+          const Icon(Icons.arrow_back_ios),
+          ""),
       size: size,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

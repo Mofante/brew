@@ -45,5 +45,22 @@
       "Pour all the water in 15s, during the first 10 seconds pour circularly, during last 5s pour in the center.",
       "Enjoy!"
    ]
+},
+{
+   "id":3,
+   "title":"April's V60",
+   "ratio":0.0666666,
+   "temp":92,
+   "grind":"coarse",
+   "steps":[
+      "Put your coffee in the v60 and tare.",
+      "Bloom the coffee with around x grams of water, 40s",
+      "Slowly pour x grams of water and wait, 30s",
+      "Slowly pour x grams of water and wait, 30s",
+      "Slowly pour x grams of water and wait, 30s",
+      "Slowly pour x grams of water and wait, 30s",
+      "Slowly pour x grams of water and wait, 30s",
+      "Enjoy!"
+   ]
 }
 ]
