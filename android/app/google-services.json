@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490265911564",
+    "project_id": "brew-34b75",
+    "storage_bucket": "brew-34b75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490265911564:android:e474c227790e494ae5a929",
+        "android_client_info": {
+          "package_name": "com.mofante.brew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490265911564-ghbce8jb90ov2f696ipoan2rhjlkhq7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtmsxCKhaBM1DwhqntMWyzZA5y27j4yS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490265911564-ghbce8jb90ov2f696ipoan2rhjlkhq7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
