@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/login_button.dart';
@@ -6,6 +8,14 @@ import '../widgets/bottom_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
+
+  Future<void> _signInAnon() async {
+    try {
+      await FirebaseAuth.instance.signInAnonymously();
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,9 +93,7 @@ class WelcomeScreen extends StatelessWidget {
             const Color(0xffFEFAE0),
             Colors.black,
             'Sign Up with Google',
-            () => () {
-              Navigator.pushNamed(context, '/home');
-            },
+            () => _signInAnon,
           ),
           BottomText(
             size: size,

@@ -1,0 +1,126 @@
+[
+   {
+      "id":1,
+      "title":"James Hoffmann's Ultimate V60",
+      "ratio":0.06,
+      "temp":98,
+      "grind":"medium fine",
+      "steps":[
+         {
+            "text":"Grind your coffee to $grind. Put your coffee in the v60 and tare the scales.",
+            "timer":null
+         },
+         {
+            "text":"Create a little well in the middle of the grounds.",
+            "timer":null
+         },
+         {
+            "text":"Bloom the coffee with around ${dose * 2} grams of water and swirl until evenly mixed",
+            "timer":45
+         },
+	 {
+            "text":"Pour ${(out * 0.6).round()}g water in the next",
+            "timer":30
+         },
+	 {
+            "text":"Pour the remaining ${(out * 0.4).round()}g in the next",
+            "timer":30
+         },
+	 {
+            "text":"Stir once clockwise and once counterclockwise with a spoon.",
+            "timer":null
+         },
+	 {
+            "text":"When safe, give the brewer a gentle swirl.",
+            "timer":null
+         },
+      ]
+   },
+   {
+      "id":2,
+      "title":"Tetsu Kasuya's 4:6",
+      "ratio":0.0666666,
+      "temp":92,
+      "grind":"coarse",
+      "steps":[
+         {
+            "text":"Grind your coffee to $grind. Put your coffee in the v60 and tare the scales.",
+            "timer":null
+         },
+         {
+            "text":"Bloom the coffee with around ${(out / 5).round()} grams of water",
+            "timer":45
+         },
+	 {
+            "text":"Slowly pour ${(out / 5).round()} grams of water and wait",
+            "timer":45
+         },
+	 {
+            "text":"Slowly pour ${(out / 5).round()} grams of water and wait",
+            "timer":45
+         },
+	 {
+            "text":"Slowly pour ${(out / 5).round()} grams of water and wait",
+            "timer":45
+         },
+	 {
+            "text":"Slowly pour ${(out / 5).round()} grams of water and wait",
+            "timer":45
+         },
+      ]
+   },
+   {
+      "id":3,
+      "title":"Tetsu Kasuya's Sometimes Good",
+      "ratio":0.08333333,
+      "temp":96,
+      "grind":"very fine",
+      "steps":[
+         {
+            "text":"Grind your coffee to $grind. Put your coffee in the v60 and tare the scales.",
+            "timer":null
+         },
+         {
+            "text":"Pour $out water, during the first 10s pour circularly, than for the last 5s pour in the center.",
+            "timer":15
+         },
+      ]
+   },
+   {
+      "id":4,
+      "title":"April's V60",
+      "ratio":0.0666666,
+      "temp":92,
+      "grind":"coarse",
+      "steps":[
+         {
+            "text":"Grind your coffee to $grind. Put your coffee in the v60 and tare the scales.",
+            "timer":null
+         },
+         {
+            "text":"Bloom the coffee with around ${(out / 6).round()} grams of water",
+            "timer":40
+         },
+	 {
+            "text":"Slowly pour ${(out / 6).round()} grams of water and wait",
+            "timer":30
+         },
+	 {
+            "text":"Slowly pour ${(out / 6).round()} grams of water and wait",
+            "timer":30
+         },
+	 {
+            "text":"Slowly pour ${(out / 6).round()} grams of water and wait",
+            "timer":30
+         },
+	 {
+            "text":"Slowly pour ${(out / 6).round()} grams of water and wait",
+            "timer":30
+         },
+	 {
+            "text":"Slowly pour ${(out / 6).round()} grams of water and wait",
+            "timer":30
+         },
+      ]
+   },
+]
