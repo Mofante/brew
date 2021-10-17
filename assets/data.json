@@ -1,66 +1,170 @@
 [
-    {
-   "id":1,
-   "title":"James Hoffmann's Ultimate V60",
-   "ratio":0.06,
-   "temp":98,
-   "grind":"medium fine",
-   "steps":[
-      "Put your coffee in the v60 and tare.",
-      "Create a little well in the middle of the grounds.",
-      "Bloom the coffee with around x grams of water, 45s",
-      "Swirl until evenly mixed",
-      "45 seconds",
-      "Pour 60% of your total brew water in the next 30 seconds",
-      "Pour the remaining 40% in the next 30 seconds",
-      "Stir once clockwise and once counterclockwise with a spoon",
-      "Give it a gantle swirl",
-      "Enjoy!"
-   ]
-},
-    {
-   "id":2,
-   "title":"Tetsu Kasuya's 4:6",
-   "ratio":0.0666666,
-   "temp":92,
-   "grind":"coarse",
-   "steps":[
-      "Put your coffee in the v60 and tare.",
-      "Bloom the coffee with around x grams of water, 45s",
-      "Slowly pour x grams of water and wait, 45s",
-      "Slowly pour x grams of water and wait, 45s",
-      "Slowly pour x grams of water and wait, 45s",
-      "Slowly pour x grams of water and wait, 45s",
-      "Enjoy!"
-   ]
-},
-    {
-   "id":3,
-   "title":"Tetsu Kasuya's Sometimes Good",
-   "ratio":0.08333333,
-   "temp":96,
-   "grind":"very fine",
-   "steps":[
-      "Put your coffee in the v60 and tare.",
-      "Pour all the water in 15s, during the first 10 seconds pour circularly, during last 5s pour in the center.",
-      "Enjoy!"
-   ]
-},
-{
-   "id":3,
-   "title":"April's V60",
-   "ratio":0.0666666,
-   "temp":92,
-   "grind":"coarse",
-   "steps":[
-      "Put your coffee in the v60 and tare.",
-      "Bloom the coffee with around x grams of water, 40s",
-      "Slowly pour x grams of water and wait, 30s",
-      "Slowly pour x grams of water and wait, 30s",
-      "Slowly pour x grams of water and wait, 30s",
-      "Slowly pour x grams of water and wait, 30s",
-      "Slowly pour x grams of water and wait, 30s",
-      "Enjoy!"
-   ]
-}
+   {
+      "id":1,
+      "title":"James Hoffmann's Ultimate V60",
+      "ratio":0.06,
+      "temp":98,
+      "grind":"medium fine",
+      "steps":[
+         {
+            "textA":"Grind your coffee to ",
+            "textB":". Put your coffee in the v60 and tare the scales.",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"Create a little well in the middle of the grounds.",
+            "textB":"",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"Bloom the coffee with around ",
+            "textB":" grams of water and swirl until evenly mixed",
+            "coffee":0.12,
+            "timer":45
+         },
+         {
+            "textA":"Pour ",
+            "textB":" grams of water in the next",
+            "coffee":0.58,
+            "timer":30
+         },
+         {
+            "textA":"Pour the remaining ",
+            "textB":" grams of water in the next",
+            "coffee":0.4,
+            "timer":30
+         },
+         {
+            "textA":"Stir once clockwise and once counterclockwise with a spoon.",
+            "textB":"",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"When safe, give the brewer a gentle swirl.",
+            "textB":"",
+            "coffee":0,
+            "timer":0
+         }
+      ]
+   },
+   {
+      "id":2,
+      "title":"Tetsu Kasuya's 4:6",
+      "ratio":0.0666666,
+      "temp":92,
+      "grind":"coarse",
+      "steps":[
+         {
+            "textA":"Grind your coffee to ",
+            "textB":". Put your coffee in the v60 and tare the scales.",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"Bloom the coffee with around ",
+            "textB":" grams of water",
+            "coffee":0.2,
+            "timer":45
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.2,
+            "timer":45
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.2,
+            "timer":45
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.2,
+            "timer":45
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.2,
+            "timer":45
+         }
+      ]
+   },
+   {
+      "id":3,
+      "title":"Tetsu Kasuya's Sometimes Good",
+      "ratio":0.08333333,
+      "temp":96,
+      "grind":"very fine",
+      "steps":[
+         {
+            "textA":"Grind your coffee to ",
+            "textB":". Put your coffee in the v60 and tare the scales.",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"Pour",
+            "textB":" water, during the first 10s pour circularly, than for the last 5s pour in the center.",
+            "coffee":1,
+            "timer":15
+         }
+      ]
+   },
+   {
+      "id":4,
+      "title":"April's V60",
+      "ratio":0.0666666,
+      "temp":92,
+      "grind":"coarse",
+      "steps":[
+         {
+            "textA":"Grind your coffee to ",
+            "textB":". Put your coffee in the v60 and tare the scales.",
+            "coffee":0,
+            "timer":0
+         },
+         {
+            "textA":"Bloom the coffee with around ",
+            "textB":" grams of water",
+            "coffee":0.166666,
+            "timer":40
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.166666,
+            "timer":30
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.166666,
+            "timer":30
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.166666,
+            "timer":30
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.166666,
+            "timer":30
+         },
+         {
+            "textA":"Slowly pour ",
+            "textB":" grams of water and wait",
+            "coffee":0.166666,
+            "timer":30
+         }
+      ]
+   }
 ]
