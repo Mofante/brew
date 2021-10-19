@@ -26,7 +26,7 @@ class Success extends StatelessWidget {
                 "Your perfect brew is ready",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xffFEFAE0),
+                  color: const Color(0xffFEFAE0),
                   fontWeight: FontWeight.w400,
                   fontSize: 0.07 * size.height,
                 ),
@@ -40,14 +40,14 @@ class Success extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  primary: Color(0xffBA5A31),
-                  onPrimary: Color(0xffFEFAE0),
+                  primary: const Color(0xffBA5A31),
+                  onPrimary: const Color(0xffFEFAE0),
                   textStyle: TextStyle(
                     fontSize: size.height * 0.04,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                child: Text("Enjoy!"),
+                child: const Text("Enjoy!"),
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, "/");
                 },

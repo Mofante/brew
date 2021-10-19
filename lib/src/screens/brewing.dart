@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:html';
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
-import 'package:brew/src/widgets/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:brew/src/templates.dart';
 import 'package:flutter/services.dart';
@@ -46,8 +44,8 @@ class _BrewScreenState extends State<BrewScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              primary: Color(0xffBA5A31),
-              onPrimary: Color(0xffFEFAE0),
+              primary: const Color(0xffBA5A31),
+              onPrimary: const Color(0xffFEFAE0),
               textStyle: TextStyle(
                 fontSize: size.height * 0.04,
                 fontWeight: FontWeight.w500,
@@ -83,7 +81,7 @@ class _BrewScreenState extends State<BrewScreen> {
                 Text(
                   "Your Dose:",
                   style: TextStyle(
-                    color: Color(0xffFEFAE0),
+                    color: const Color(0xffFEFAE0),
                     fontWeight: FontWeight.w400,
                     fontSize: 0.04 * size.height,
                   ),
@@ -108,7 +106,7 @@ class _BrewScreenState extends State<BrewScreen> {
                   textAlign: TextAlign.center,
                   cursorColor: const Color(0xffFEFAE0),
                   style: TextStyle(
-                    color: Color(0xffFEFAE0),
+                    color: const Color(0xffFEFAE0),
                     fontWeight: FontWeight.w400,
                     fontSize: 0.05 * size.height,
                   ),
@@ -118,7 +116,7 @@ class _BrewScreenState extends State<BrewScreen> {
                     ),
                     suffixText: 'g',
                     suffixStyle: TextStyle(
-                      color: Color(0xffFEFAE0),
+                      color: const Color(0xffFEFAE0),
                       fontWeight: FontWeight.w400,
                       fontSize: 0.05 * size.height,
                     ),
@@ -136,7 +134,7 @@ class _BrewScreenState extends State<BrewScreen> {
                 Text(
                   "Your Output:",
                   style: TextStyle(
-                    color: Color(0xffFEFAE0),
+                    color: const Color(0xffFEFAE0),
                     fontWeight: FontWeight.w400,
                     fontSize: 0.04 * size.height,
                   ),
@@ -161,7 +159,7 @@ class _BrewScreenState extends State<BrewScreen> {
                   textAlign: TextAlign.center,
                   cursorColor: const Color(0xffFEFAE0),
                   style: TextStyle(
-                    color: Color(0xffFEFAE0),
+                    color: const Color(0xffFEFAE0),
                     fontWeight: FontWeight.w400,
                     fontSize: 0.05 * size.height,
                   ),
@@ -171,7 +169,7 @@ class _BrewScreenState extends State<BrewScreen> {
                     ),
                     suffixText: 'g',
                     suffixStyle: TextStyle(
-                      color: Color(0xffFEFAE0),
+                      color: const Color(0xffFEFAE0),
                       fontWeight: FontWeight.w400,
                       fontSize: 0.05 * size.height,
                     ),
@@ -191,7 +189,7 @@ class _BrewScreenState extends State<BrewScreen> {
                 "Prepare your brewer, scales and your favourite cup. Boil some water, rince the filter and get ready to",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xffFEFAE0),
+                  color: const Color(0xffFEFAE0),
                   fontWeight: FontWeight.w400,
                   fontSize: 0.03 * size.height,
                 ),
@@ -213,7 +211,7 @@ class _BrewScreenState extends State<BrewScreen> {
 
       void _startTimer() {
         if (counter < widget.brewMethod.steps.length) {
-          _timer = Timer.periodic(Duration(seconds: 1), (_timer) {
+          _timer = Timer.periodic(const Duration(seconds: 1), (_timer) {
             if (widget.brewMethod.steps[counter].timer > 0) {
               setState(() {
                 widget.brewMethod.steps[counter].timer--;
@@ -259,8 +257,8 @@ class _BrewScreenState extends State<BrewScreen> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              primary: Color(0xffBA5A31),
-              onPrimary: Color(0xffFEFAE0),
+              primary: const Color(0xffBA5A31),
+              onPrimary: const Color(0xffFEFAE0),
               textStyle: TextStyle(
                 fontSize: size.height * 0.04,
                 fontWeight: FontWeight.w500,
@@ -295,7 +293,7 @@ class _BrewScreenState extends State<BrewScreen> {
                       _textA + _grind + _textB,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xffFEFAE0),
+                        color: const Color(0xffFEFAE0),
                         fontWeight: FontWeight.w400,
                         fontSize: 0.03 * size.height,
                       ),
@@ -304,10 +302,10 @@ class _BrewScreenState extends State<BrewScreen> {
                 : SizedBox(
                     width: size.width * 0.8,
                     child: Text(
-                      _textA + "$_coffee" + _textB,
+                      _textA + _coffee + _textB,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color(0xffFEFAE0),
+                        color: const Color(0xffFEFAE0),
                         fontWeight: FontWeight.w400,
                         fontSize: 0.03 * size.height,
                       ),
@@ -318,23 +316,23 @@ class _BrewScreenState extends State<BrewScreen> {
                     "${widget.brewMethod.steps[counter].timer}",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xffFEFAE0),
+                      color: const Color(0xffFEFAE0),
                       fontWeight: FontWeight.w400,
                       fontSize: 0.1 * size.height,
                     ),
                   )
-                : SizedBox(),
+                : const SizedBox(),
             _time != 0
                 ? Text(
                     "seconds",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xffFEFAE0),
+                      color: const Color(0xffFEFAE0),
                       fontWeight: FontWeight.w400,
                       fontSize: 0.03 * size.height,
                     ),
                   )
-                : SizedBox(),
+                : const SizedBox(),
             _button(size, "Next")
           ],
         ),

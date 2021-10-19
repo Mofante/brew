@@ -3,7 +3,6 @@ import 'package:brew/src/screens/home.dart';
 import 'package:brew/src/screens/log_in_page.dart';
 import 'package:brew/src/screens/sign_up_page.dart';
 import 'package:brew/src/screens/success.dart';
-import 'package:brew/src/screens/welcome_screen.dart';
 import 'package:brew/src/screens/wrapper.dart';
 import 'package:brew/src/templates.dart';
 import 'package:flutter/material.dart';

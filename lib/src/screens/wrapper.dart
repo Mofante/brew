@@ -1,5 +1,4 @@
 import 'package:brew/src/screens/home.dart';
-import 'package:brew/src/screens/log_in_page.dart';
 import 'package:brew/src/screens/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -15,11 +14,11 @@ class Wrapper extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.active) {
             User? user = snapshot.data;
             if (user == null) {
-              return WelcomeScreen();
+              return const WelcomeScreen();
             }
-            return Home();
+            return const Home();
           } else {
-            return Scaffold(
+            return const Scaffold(
               body: Center(
                 child: CircularProgressIndicator(),
               ),

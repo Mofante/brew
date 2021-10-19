@@ -2,7 +2,6 @@
 //
 //     final brewMethod = brewMethodFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<BrewMethod> brewMethodFromJson(String str) =>

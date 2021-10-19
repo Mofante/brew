@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/login_button.dart';
@@ -13,7 +12,7 @@ class WelcomeScreen extends StatelessWidget {
     try {
       await FirebaseAuth.instance.signInAnonymously();
     } catch (e) {
-      print(e);
+      //print(e);
     }
   }
 
