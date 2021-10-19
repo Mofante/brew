@@ -5,6 +5,7 @@ import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:brew/src/templates.dart';
+import 'package:flutter/services.dart';
 
 class BrewScreen extends StatefulWidget {
   const BrewScreen({Key? key, required this.brewMethod}) : super(key: key);
@@ -28,7 +29,7 @@ class _BrewScreenState extends State<BrewScreen> {
     // Clean up the controller when the widget is removed from the widget tree.
     // This also removes the _printLatestValue listener.
     _inController.dispose();
-    _inController.dispose();
+    _outController.dispose();
     super.dispose();
   }
 
@@ -91,6 +92,9 @@ class _BrewScreenState extends State<BrewScreen> {
                   height: size.height * 0.02,
                 ),
                 TextFormField(
+                  inputFormatters: [
+                    FilteringTextInputFormatter.allow(RegExp(r'[1-9][0-9]*'))
+                  ],
                   controller: _inController,
                   onChanged: (value) {
                     setState(() {
@@ -141,6 +145,9 @@ class _BrewScreenState extends State<BrewScreen> {
                   height: size.height * 0.02,
                 ),
                 TextFormField(
+                  inputFormatters: [
+                    FilteringTextInputFormatter.allow(RegExp(r'[1-9][0-9]*'))
+                  ],
                   controller: _outController,
                   //initialValue: "$out",
                   onChanged: (value) {
