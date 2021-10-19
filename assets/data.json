@@ -20,20 +20,20 @@
          },
          {
             "textA":"Bloom the coffee with around ",
-            "textB":" grams of water and swirl until evenly mixed",
+            "textB":" grams of water, swirl until evenly mixed and wait",
             "coffee":0.12,
             "timer":45
          },
          {
-            "textA":"Pour ",
+            "textA":"Pour up to ",
             "textB":" grams of water in the next",
-            "coffee":0.58,
+            "coffee":0.6,
             "timer":30
          },
          {
-            "textA":"Pour the remaining ",
+            "textA":"Pour up to ",
             "textB":" grams of water in the next",
-            "coffee":0.4,
+            "coffee":1,
             "timer":30
          },
          {
@@ -65,32 +65,32 @@
          },
          {
             "textA":"Bloom the coffee with around ",
-            "textB":" grams of water",
-            "coffee":0.2,
-            "timer":45
-         },
-         {
-            "textA":"Slowly pour ",
             "textB":" grams of water and wait",
             "coffee":0.2,
             "timer":45
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.2,
+            "coffee":0.4,
             "timer":45
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.2,
+            "coffee":0.6,
             "timer":45
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.2,
+            "coffee":0.8,
+            "timer":45
+         },
+         {
+            "textA":"Slowly pour up to ",
+            "textB":" grams of water and wait",
+            "coffee":1,
             "timer":45
          }
       ]
@@ -109,8 +109,8 @@
             "timer":0
          },
          {
-            "textA":"Pour",
-            "textB":" water, during the first 10s pour circularly, than for the last 5s pour in the center.",
+            "textA":"Pour ",
+            "textB":" grams of water, during the first 10s pour circularly, than for the last 5s pour in the center.",
             "coffee":1,
             "timer":15
          }
@@ -131,38 +131,38 @@
          },
          {
             "textA":"Bloom the coffee with around ",
-            "textB":" grams of water",
+            "textB":" grams of water and wait",
             "coffee":0.166666,
             "timer":40
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.166666,
+            "coffee":0.333332,
             "timer":30
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.166666,
+            "coffee":0.5,
             "timer":30
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.166666,
+            "coffee":0.666666,
             "timer":30
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.166666,
+            "coffee":0.833332,
             "timer":30
          },
          {
-            "textA":"Slowly pour ",
+            "textA":"Slowly pour up to ",
             "textB":" grams of water and wait",
-            "coffee":0.166666,
+            "coffee":1,
             "timer":30
          }
       ]

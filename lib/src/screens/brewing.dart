@@ -199,34 +199,46 @@ class _BrewScreenState extends State<BrewScreen> {
       String _textB = widget.brewMethod.steps[counter].textB;
       String _grind = widget.brewMethod.grind;
       int _time = widget.brewMethod.steps[counter].timer;
-      int _coffee = (widget.brewMethod.steps[counter].coffee * out).round();
+      String _coffee =
+          (widget.brewMethod.steps[counter].coffee * out).round().toString();
+
+      _coffee == "0" ? _coffee = "" : _coffee = _coffee;
 
       void _startTimer() {
-        _timer = Timer.periodic(Duration(seconds: 1), (_timer) {
-          if (widget.brewMethod.steps[counter].timer > 0) {
-            setState(() {
-              widget.brewMethod.steps[counter].timer--;
-            });
-          }
-          if (widget.brewMethod.steps[counter].timer == 0) {
-            _timer.cancel();
-          }
-        });
+        if (counter < widget.brewMethod.steps.length) {
+          _timer = Timer.periodic(Duration(seconds: 1), (_timer) {
+            if (widget.brewMethod.steps[counter].timer > 0) {
+              setState(() {
+                widget.brewMethod.steps[counter].timer--;
+              });
+            }
+            if (widget.brewMethod.steps[counter].timer == 0) {
+              _timer.cancel();
+            }
+          });
+        }
       }
 
       void update() {
         if (_timer != null) {
           _timer!.cancel();
         }
-        setState(() {
+        if (counter < widget.brewMethod.steps.length - 1) {
+          setState(() {
+            counter++;
+            _textA = widget.brewMethod.steps[counter].textA;
+            _textB = widget.brewMethod.steps[counter].textB;
+            _grind = widget.brewMethod.grind;
+            _time = widget.brewMethod.steps[counter].timer;
+            _coffee = (widget.brewMethod.steps[counter].coffee * out)
+                .round()
+                .toString();
+          });
+        } else {
           counter++;
-          _textA = widget.brewMethod.steps[counter].textA;
-          _textB = widget.brewMethod.steps[counter].textB;
-          _grind = widget.brewMethod.grind;
-          _time = widget.brewMethod.steps[counter].timer;
-          _coffee = (widget.brewMethod.steps[counter].coffee * out).round();
-        });
-        if (_time > 0) {
+          Navigator.pushReplacementNamed(context, '/success');
+        }
+        if (_time > 0 && counter < widget.brewMethod.steps.length) {
           _startTimer();
         }
       }
@@ -302,6 +314,17 @@ class _BrewScreenState extends State<BrewScreen> {
                       color: Color(0xffFEFAE0),
                       fontWeight: FontWeight.w400,
                       fontSize: 0.1 * size.height,
+                    ),
+                  )
+                : SizedBox(),
+            _time != 0
+                ? Text(
+                    "seconds",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color(0xffFEFAE0),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 0.03 * size.height,
                     ),
                   )
                 : SizedBox(),

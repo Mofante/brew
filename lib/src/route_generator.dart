@@ -2,6 +2,7 @@ import 'package:brew/src/screens/brewing.dart';
 import 'package:brew/src/screens/home.dart';
 import 'package:brew/src/screens/log_in_page.dart';
 import 'package:brew/src/screens/sign_up_page.dart';
+import 'package:brew/src/screens/success.dart';
 import 'package:brew/src/screens/welcome_screen.dart';
 import 'package:brew/src/screens/wrapper.dart';
 import 'package:brew/src/templates.dart';
@@ -14,6 +15,8 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => const Wrapper());
+      case '/success':
+        return MaterialPageRoute(builder: (_) => const Success());
       case '/register':
         return MaterialPageRoute(builder: (_) => const SignUpPage());
       case '/login':
