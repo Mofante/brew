@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html';
 import 'package:brew/src/screens/layout.dart';
 import 'package:brew/src/widgets/app_bar.dart';
 import 'package:brew/src/widgets/login_button.dart';
@@ -18,6 +19,7 @@ class _BrewScreenState extends State<BrewScreen> {
   int counter = -1;
   int dose = 0;
   int out = 0;
+  Timer? _timer;
   final TextEditingController _inController = TextEditingController();
   final TextEditingController _outController = TextEditingController();
 
@@ -199,27 +201,23 @@ class _BrewScreenState extends State<BrewScreen> {
       int _time = widget.brewMethod.steps[counter].timer;
       int _coffee = (widget.brewMethod.steps[counter].coffee * out).round();
 
-//timer nie dziala
-      Timer _timer;
-      void startTimer() {
-        const oneSec = const Duration(seconds: 1);
-        _timer = Timer.periodic(
-          oneSec,
-          (Timer timer) {
-            if (_time == 0) {
-              setState(() {
-                timer.cancel();
-              });
-            } else {
-              setState(() {
-                _time--;
-              });
-            }
-          },
-        );
+      void _startTimer() {
+        _timer = Timer.periodic(Duration(seconds: 1), (_timer) {
+          if (widget.brewMethod.steps[counter].timer > 0) {
+            setState(() {
+              widget.brewMethod.steps[counter].timer--;
+            });
+          }
+          if (widget.brewMethod.steps[counter].timer == 0) {
+            _timer.cancel();
+          }
+        });
       }
 
       void update() {
+        if (_timer != null) {
+          _timer!.cancel();
+        }
         setState(() {
           counter++;
           _textA = widget.brewMethod.steps[counter].textA;
@@ -228,8 +226,8 @@ class _BrewScreenState extends State<BrewScreen> {
           _time = widget.brewMethod.steps[counter].timer;
           _coffee = (widget.brewMethod.steps[counter].coffee * out).round();
         });
-        if (_time != 0) {
-          startTimer();
+        if (_time > 0) {
+          _startTimer();
         }
       }
 
@@ -272,9 +270,41 @@ class _BrewScreenState extends State<BrewScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             counter == 0
-                ? Text(_textA + _grind + _textB)
-                : Text(_textA + "$_coffee" + _textB),
-            _time != 0 ? Text("$_time") : SizedBox(),
+                ? SizedBox(
+                    width: 0.8 * size.width,
+                    child: Text(
+                      _textA + _grind + _textB,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xffFEFAE0),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 0.03 * size.height,
+                      ),
+                    ),
+                  )
+                : SizedBox(
+                    width: size.width * 0.8,
+                    child: Text(
+                      _textA + "$_coffee" + _textB,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xffFEFAE0),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 0.03 * size.height,
+                      ),
+                    ),
+                  ),
+            _time != 0
+                ? Text(
+                    "${widget.brewMethod.steps[counter].timer}",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color(0xffFEFAE0),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 0.1 * size.height,
+                    ),
+                  )
+                : SizedBox(),
             _button(size, "Next")
           ],
         ),
